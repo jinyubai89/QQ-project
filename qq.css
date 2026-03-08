@@ -36,13 +36,13 @@ a {
     padding: 20px 0;
 }
 
-.logo {
+/*.logo {
     font-size: 24px;
     font-weight: bold;
     color: #31c27c;
     margin-right: 40px;
 }
-
+*/
 .top-nav {
     display: flex;
     gap: 30px;
@@ -57,12 +57,24 @@ a {
     background-color: #31c27c;
     color: #fff;
     padding: 5px 15px;
+    /*盒子直角变圆角*/
     border-radius: 3px;
 }
 
+.top-nav li a {
+   /* vertical-align: middle;*/
+    display: inline-block;
+        /* 或 block，避免 inline 的 baseline 问题 */
+        line-height: 1.5;
+        /* 与整体一致 */
+        padding: 5px 0;
+        /* 需要可与 li.active 的 padding 协调 */
+}
+
 .top-right {
-    margin-left: auto;
     display: flex;
+    /*justify-content: flex-end;*/
+    margin-left: auto;
     align-items: center;
     gap: 15px;
 }
@@ -71,6 +83,7 @@ a {
     padding: 8px 15px;
     border: 1px solid #ccc;
     border-radius: 20px;
+    /*消除默认边框*/
     outline: none;
 }
 
@@ -84,6 +97,7 @@ a {
 }
 
 .header-bottom {
+    /*给上下header加一条边框*/
     border-top: 1px solid #eee;
     padding: 15px 0;
 }
@@ -97,11 +111,18 @@ a {
 .sub-nav li.active {
     color: #31c27c;
 }
+/*解决mv对齐问题*/
+.mv{
+    display:inline-block;
+    padding:5px 0;
 
+}
 /* 公共 Section 样式 */
+/*section是有意义的块元素*/
 .section {
     max-width: 1200px;
     margin: 40px auto;
+    /*子元素文字水平居中*/
     text-align: center;
 }
 
@@ -113,6 +134,7 @@ a {
 
 .section-nav {
     display: flex;
+    /*flex子元素居中，自动分配剩余空间*/
     justify-content: center;
     gap: 30px;
     margin-bottom: 30px;
@@ -277,21 +299,20 @@ a {
     font-weight: normal;
 }
 
-.client-links {
-    display: flex;
-    gap: 20px;
-}
-
 .footer-col ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 13px;
+    cursor:pointer;
 }
 
-.grid-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px 30px;
+.flex-links {
+    display: flex;
+    flex-wrap: wrap;
     font-size: 13px;
+}
+
+.flex-contents {
+    flex: 0 0 calc(100% / 3);
 }

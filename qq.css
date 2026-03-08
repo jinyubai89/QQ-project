@@ -1,0 +1,297 @@
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+    color: #333;
+    overflow-y: scroll;
+    /* 确保有纵向滚动条 */
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header 样式 (Flex布局) */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #31c27c;
+    margin-right: 40px;
+}
+
+.top-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.top-nav li {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.top-nav li.active {
+    background-color: #31c27c;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+.top-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-right input {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.btn-vip {
+    background-color: #31c27c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.header-bottom {
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.sub-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.sub-nav li.active {
+    color: #31c27c;
+}
+
+/* 公共 Section 样式 */
+.section {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 28px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.section-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.section-nav li.active {
+    color: #31c27c;
+}
+
+/* 歌单轮播图样式 */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track-wrapper {
+    overflow: hidden;
+    /* 隐藏超出部分 */
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease-in-out;
+    /* 轮播动画 */
+}
+
+.card {
+    flex: 0 0 calc((100% - 80px) / 5);
+    /* 一排显示5个 */
+    text-align: left;
+    background: #fff;
+    padding-bottom: 10px;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.card p {
+    font-size: 14px;
+    margin: 10px 0 5px;
+}
+
+.card span {
+    font-size: 12px;
+    color: #999;
+}
+
+.carousel-btn {
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 24px;
+    width: 40px;
+    height: 60px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.prev {
+    left: -50px;
+}
+
+.next {
+    right: -50px;
+}
+
+/* 新歌首发样式 */
+.new-song-layout {
+    position: relative;
+    text-align: left;
+}
+
+.btn-play-all {
+    position: absolute;
+    left: 0;
+    top: -55px;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 8px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-play-all:hover {
+    background: #f0f0f0;
+}
+
+.new-song-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    /* 作为横向轮播轨道 */
+    gap: 20px;
+}
+
+.song-item {
+    flex: 0 0 calc(33.333% - 14px);
+    /* 一排大约3个，配合 JS 控制滚动 */
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+}
+
+.song-item img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.song-info h4 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.song-info p {
+    font-size: 12px;
+    color: #999;
+}
+
+.song-item .time {
+    margin-left: auto;
+    font-size: 14px;
+    color: #999;
+}
+
+/* 页脚样式 */
+.footer {
+    background-color: #333;
+    color: #999;
+    padding: 60px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-col h3 {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.client-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.grid-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 30px;
+    font-size: 13px;
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ音乐</title>
+    <link rel="stylesheet" href="qq.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <!--最上边的导航 -->
+            <div class="logo">QQ音乐</div>
+            <img src="./新歌首发图片/QQ音乐-千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！_files/logo.png" alt="logo">
+            <ul class="top-nav">
+                <li class="active">音乐馆</li>
+                <li><a href="https://y.qq.com/portal/my/index.html" class="my-music">我的音乐</a></li>
+                <li><a href="https://y.qq.com/portal/client.html" class="client">客户端</a></li>
+                <li><a href="https://y.qq.com/portal/open.html" class="open-platform">开放平台</a></li>
+                <li><a href="https://y.qq.com/portal/vipportal/index.html" class="vip">VIP</a></li>
+            </ul>
+            <div class="top-right">
+                <input type="text" placeholder="搜索音乐、MV、歌单...">
+                <a href="https://y.qq.com/portal/login.html" class="login">登录</a>
+                <a href="https://y.qq.com/portal/vipportal/index.html" class="btn-vip">开通VIP</a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <ul class="sub-nav">
+                <li class="active">首页</li>
+                <li><a href="https://y.qq.com/n/ryqq_v2/singer_list" class="singer">歌手</a></li>
+                <li><a href="https://y.qq.com/n/ryqq_v2/album" class="new-album">新碟</a></li>
+                <li><a href="https://y.qq.com/n/ryqq_v2/toplist/4" class="rank">排行榜</a></li>
+                <li><a href="https://y.qq.com/n/ryqq_v2/category" class="category-playlist">分类歌单</a></li>
+                <li><a href="https://y.qq.com/n/ryqq_v2/radio" class="radio">雷达</a></li>
+                <li><a href="https://y.qq.com/n/ryqq_v2/mvList" class="mv">MV</a></li>
+                <li><a href="https://y.qq.com/n/ryqq_v2/album_mall" class="digital-album">数字专辑</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="section playlists">
+            <h2 class="section-title">歌单推荐</h2>
+            <ul class="section-nav">
+                <li class="active">为你推荐</li>
+                <li>经典国语</li>
+                <li>经典</li>
+                <li>KTV热歌</li>
+                <li>官方歌单</li>
+                <li>情歌</li>
+            </ul>
+            <!--歌单推荐-->
+            <div class="carousel-container" id="playlist-carousel">
+                <button class="carousel-btn prev" id="pl-prev">&lt;</button>
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="pl-track">
+                        <div class="card">
+                            <img src="./歌单图片/b7cf592276ea2dfdb731e247a074dbc47463483a_12ff76.webp" alt="cover">
+                            <p>抖音最火的歌2025</p><span>播放量: 3745万</span>
+                        </div>
+                        <div class="card">
+                            <img src="./歌单图片/bf48587389b81a6c2cbb5250599328ed377e3890_8f194.webp" alt="cover">
+                            <p>跑步音乐：运动必备</p><span>播放量: 1045万</span>
+                        </div>
+                        <div class="card">
+                            <img src="./歌单图片/download.jpg" alt="cover">
+                            <p>甜酷能量罐 BABYMONSTER</p><span>播放量: 17万</span>
+                        </div>
+                        <div class="card">
+                            <img src="./歌单图片/300.webp" alt="cover">
+                            <p>孙燕姿「就在日落以后」</p><span>播放量: 1204万</span>
+                        </div>
+                        <div class="card">
+                            <img src="./歌单图片/729a070416611416fd7ce3bdf347699c6c8a1363_5062f.webp" alt="cover">
+                            <p>抖音热歌:已循环10000遍</p><span>播放量: 1054万</span>
+                        </div>
+                        <div class="card">
+                            <img src="./新歌首发图片/QQ音乐-千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！_files/4267e560918c8f9ec746848bbe6275ebdd90e3a9_24f707.jpg" alt="cover">
+                            <p>睡前轻音乐伴眠</p><span>播放量: 800万</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <button class="carousel-btn next" id="pl-next">&gt;</button>
+            </div>
+        </section>
+
+        <section class="section new-songs">
+            <h2 class="section-title">新歌首发</h2>
+            <ul class="section-nav">
+                <li class="active">最新</li>
+                <li>内地</li>
+                <li>港台</li>
+                <li>欧美</li>
+                <li>韩国</li>
+                <li>日本</li>
+            </ul>
+            <!-- 新歌首发 -->
+            <div class="new-song-layout">
+                <button class="btn-play-all">▷ 播放全部</button>
+                <div class="carousel-container" id="new-song-carousel">
+                    <button class="carousel-btn prev" id="ns-prev">&lt;</button>
+                    <div class="carousel-track-wrapper">
+                        <div class="carousel-track new-song-grid" id="ns-track">
+                            <div class="song-item">
+                                <img src="./新歌首发图片/QQ音乐-千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！_files/" alt="cover">
+                                <div class="song-info">
+                                    <h4>闪闪发亮</h4>
+                                    <p>黄龄 / 斯丹曼簇</p>
+                                </div><span class="time">03:07</span>
+                            </div>
+                            <div class="song-item">
+                                <img src="https://picsum.photos/60?random=8" alt="cover">
+                                <div class="song-info">
+                                    <h4>背着山的人</h4>
+                                    <p>周深</p>
+                                </div><span class="time">04:04</span>
+                            </div>
+                            <div class="song-item">
+                                <img src="https://picsum.photos/60?random=9" alt="cover">
+                                <div class="song-info">
+                                    <h4>回归一块小石头</h4>
+                                    <p>杨千嬅</p>
+                                </div><span class="time">03:26</span>
+                            </div>
+                            <div class="song-item">
+                                <img src="https://picsum.photos/60?random=10" alt="cover">
+                                <div class="song-info">
+                                    <h4>等待一切重来</h4>
+                                    <p>TF_ING</p>
+                                </div><span class="time">03:43</span>
+                            </div>
+                            <div class="song-item">
+                                <img src="https://picsum.photos/60?random=11" alt="cover">
+                                <div class="song-info">
+                                    <h4>命里有时</h4>
+                                    <p>谭维维</p>
+                                </div><span class="time">04:09</span>
+                            </div>
+                            <div class="song-item">
+                                <img src="https://picsum.photos/60?random=12" alt="cover">
+                                <div class="song-info">
+                                    <h4>清清如我</h4>
+                                    <p>郁可唯</p>
+                                </div><span class="time">03:24</span>
+                            </div>
+                            <div class="song-item">
+                                <img src="https://picsum.photos/60?random=13" alt="cover">
+                                <div class="song-info">
+                                    <h4>Good Girl</h4>
+                                    <p>刘恋</p>
+                                </div><span class="time">03:06</span>
+                            </div>
+                            <div class="song-item">
+                                <img src="https://picsum.photos/60?random=14" alt="cover">
+                                <div class="song-info">
+                                    <h4>心动大忌</h4>
+                                    <p>李佳薇</p>
+                                </div><span class="time">03:15</span>
+                            </div>
+                            <div class="song-item">
+                                <img src="https://picsum.photos/60?random=15" alt="cover">
+                                <div class="song-info">
+                                    <h4>你也喜欢我对吗</h4>
+                                    <p>徐艺真</p>
+                                </div><span class="time">03:12</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" id="ns-next">&gt;</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>下载QQ音乐客户端</h3>
+                <ul class="client-links">
+                    <li>PC版</li>
+                    <li>Mac版</li>
+                    <li>Android版</li>
+                    <li>iPhone版</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>特色产品</h3>
+                <ul>
+                    <li>全民K歌</li>
+                    <li>银河音效</li>
+                    <li>QPlay</li>
+                    <li>车载互联</li>
+                    <li>QQ演出</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>合作链接</h3>
+                <div class="grid-links">
+                    <span>CJ ENM</span><span>腾讯视频</span><span>手机QQ空间</span>
+                    <span>最新版QQ</span><span>腾讯社交广告</span><span>电脑管家</span>
+                    <span>QQ浏览器</span><span>腾讯微云</span><span>腾讯云</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="qq.js"></script>
+</body>
+
+</html>

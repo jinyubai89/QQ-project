@@ -148,23 +148,30 @@ a {
 .carousel-container {
     position: relative;
     display: flex;
+    /* 控制垂直居中 */
     align-items: center;
 }
 
 .carousel-track-wrapper {
     overflow: hidden;
     /* 隐藏超出部分 */
+    /*占满剩余空间*/
     width: 100%;
 }
-
+/* 因为section有宽度并且继承，会溢出 */
+/* 所以看起来像 width 不起作用，其实是 min-width: auto 把它“撑大了”。 */
 .carousel-track {
     display: flex;
     gap: 20px;
+    /* 先慢后快再慢 */
     transition: transform 0.4s ease-in-out;
     /* 轮播动画 */
+    min-width: auto;
+        /* 默认值 */
 }
 
 .card {
+    /* 所以这里的 80px 是为了把 gap 从总宽度里减掉，让 5 张卡排满一行，不是为了避免被按钮遮挡。按钮本身在容器外，不会挡住卡片。 */
     flex: 0 0 calc((100% - 80px) / 5);
     /* 一排显示5个 */
     text-align: left;
@@ -175,11 +182,13 @@ a {
 .card img {
     width: 100%;
     aspect-ratio: 1;
-    object-fit: cover;
+    background-size: cover;
+    /*只要缩放变化*/
     transition: transform 0.3s;
 }
 
 .card img:hover {
+    /* 缩放倍数 */
     transform: scale(1.05);
 }
 
@@ -192,7 +201,7 @@ a {
     font-size: 12px;
     color: #999;
 }
-
+/* 按钮脱离文档流，不占空间，悬浮在容器上方 */
 .carousel-btn {
     background: rgba(0, 0, 0, 0.1);
     border: none;
@@ -201,18 +210,19 @@ a {
     height: 60px;
     cursor: pointer;
     position: absolute;
-    z-index: 10;
+    /* 让按钮一直在最上面，不被其他元素覆盖 */
+    z-index: 99;
 }
-
+/* 悬浮的效果变化 */
 .carousel-btn:hover {
     background: rgba(0, 0, 0, 0.3);
     color: white;
 }
-
+/* 在参照物左边线再往左 50px */
 .prev {
     left: -50px;
 }
-
+/* 在参照物右边线再往右 50px */
 .next {
     right: -50px;
 }

@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     // 歌单推荐轮播
     const plTrack = document.getElementById('pl-track');
-    const plPrev = document.getElementById('pl-prev');
-    const plNext = document.getElementById('pl-next');
-
-    if (plTrack && plPrev && plNext) {
+    const plPrev = document.getElementById('left-botton');
+    const plNext = document.getElementById('right-botton');
+// 判断三个对象是否都存在
+    if (plTrack && plPrev && plNext) 
+        {
         const cards = plTrack.querySelectorAll('.card');
         const totalCards = cards.length;
         const visibleCount = 5; // 一排显示 5 张

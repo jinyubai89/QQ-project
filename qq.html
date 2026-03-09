@@ -41,7 +41,7 @@
     </header>
 
     <main>
-        <!--上班部分的歌单推荐-->
+        <!--上半部分的歌单推荐-->
         <section class="section playlists">
             <!--歌单推荐上面的文字部分-->
             <h2 class="section-title">歌单推荐</h2>
@@ -55,7 +55,10 @@
             </ul>
             <!--歌单推荐下方轮播图-->
             <div class="carousel-container" id="playlist-carousel">
-                <button class="carousel-btn prev" id="pl-prev"></button>
+                <!--左侧按钮-->
+                <button class="carousel-btn prev" id="left-botton"><</button>
+                <!--可视窗口-->
+                <!--超出部分图片隐藏-->
                 <div class="carousel-track-wrapper">
                     <div class="carousel-track" id="pl-track">
                         <div class="card">
@@ -85,7 +88,8 @@
                         
                     </div>
                 </div>
-                <button class="carousel-btn next" id="pl-next">&gt;</button>
+                <!--右侧按钮-->
+                <button class="carousel-btn next" id="right-botton">></button>
             </div>
         </section>
 
@@ -103,7 +107,7 @@
             <div class="new-song-layout">
                 <button class="btn-play-all">▷ 播放全部</button>
                 <div class="carousel-container" id="new-song-carousel">
-                    <button class="carousel-btn prev" id="ns-prev">&lt;</button>
+                    <button class="carousel-btn prev" id="ns-prev"><</button>
                     <div class="carousel-track-wrapper">
                         <div class="carousel-track new-song-grid" id="ns-track">
                             <div class="song-item">
@@ -172,7 +176,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-btn next" id="ns-next">&gt;</button>
+                    <button class="carousel-btn next" id="ns-next">></button>
                 </div>
             </div>
         </section>
